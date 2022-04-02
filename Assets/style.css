@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+
+body  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+
+}
+
+h1 {
+    font-size: 40pt;
+    height: 50pt;
+    justify-content: center;
+    margin: auto;
+    padding: 20pt;
+    border: 5pt solid black;
+}
+
+.timer-box {
+    display:inline-block;
+    
+}
+
+.timer {
+    font-size: 25pt;
+    height: 100px;
+    width: 100px;
+    border: 5pt solid black;
+    float: right;
+}
+
+.joke-box {
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 40px;
+}
+
+.question {
+    content: " ";
+    display: block;
+    width: 100%;
+    border: 5pt solid black;
+
+}
+
+.answer-options {
+    justify-content: center;
+}
