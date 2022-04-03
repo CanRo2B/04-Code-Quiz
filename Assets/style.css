@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    
 }
 
 body  {
@@ -8,6 +8,7 @@ body  {
 }
 
 header {
+    display: flex;
     text-align: center;
     padding: 20px;
     padding-top: 0px;
@@ -23,31 +24,42 @@ h1 {
     border: 5pt solid black;
 }
 
+main {
+
+}
+
+textarea {
+    justify-content: center;
+}
 .timer-box {
-    display:inline-block;
+    display:flex;
+    justify-content: center;
+    border: 5pt solid black;
+    height: 200pt;
+    width: 200pt;
     
 }
 
 .timer {
-    font-size: 25pt;
-    height: 100px;
-    width: 100px;
-    border: 5pt solid black;
-    float: right;
+    font-size: 20pt;
+    justify-content: center;
 }
 
 .joke-box {
+    display: flex;
     border-radius: 5px;
     font-size: 18px;
     margin: 0 auto;
     max-width: 800px;
     padding: 30px 40px;
+    border: 5pt solid black;
 }
 
 .question {
     content: " ";
-    display: block;
-    width: 100%;
+    display: flex;
+    width: 200pt;
+    height: 200pt;
     border: 5pt solid black;
 
 }
@@ -55,3 +67,5 @@ h1 {
 .answer-options {
     justify-content: center;
 }
+
+

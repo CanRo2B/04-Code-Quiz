@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css"/>
     <title>Dad Joke Quiz</title>
 </head>
 <body>
@@ -11,6 +12,7 @@
     <header>
         <h1>How well do you know Dad Jokes?</h1>
     </header>
+    <main>
     <!-- Timer box with timer head and countdown -->
         <div class="timer-box">
              <h2 class="timer">Timer</h2>
@@ -18,22 +20,22 @@
         </div>
         <!--Joke box with jokes read and multiple choice answers -->
         <div class="Joke-box"> 
-            <div class="Question">
+            <form class="Question">
             <div class = "Answer-options">
                 <li class = "Answer-a"></li>
                 <li class = "Answer-b"></li>
                 <li class = "Answer-c"></li>
                 <li class = "Answer-d"></li>
+                <textarea id = "inputAnswer" placeholder="Your answer"></textarea>
                 <button id="start" class="btn">Start</button>
-                <textarea placeholder="Your answer"></textarea>
-
             </div>
-            </div>
+        </form>
         </div>
         <section class="Answer">
             <div class="Wins-row">Wins</div>
             <div class="Losses-row">Losses</div>
         </section>
-    <script src = "/Assets/script.js"></script>
+    </main>
+    <script src = "./Assets/script.js"></script>
 </body>
 </html>
