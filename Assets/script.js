@@ -127,38 +127,33 @@ function renderQuestions(){
     
     let currentQuestion= questions[questionIndex]
     questionInput.textContent=currentQuestion.askQuestions;
+    options.innerHTML="";
     currentQuestion.answer.forEach(function(choice,i){
         var answerButton=document.createElement("button")
         answerButton.setAttribute("value", choice)
+        answerButton.setAttribute("class", "options")
         answerButton.textContent= i + 1 + ". " + choice
         options.appendChild(answerButton)
     })
+    console.log(askQuestions)
 } 
-choice.addEventListener("click", function() {
-    userAnswer = (choice.querySelector('input[name=correctAnswer'+ i +']:checked')||{}).value;
 
-    if(userAnswer===choice[i].correctAnswer){
-
-        isWin++;
-
-        correctAnswer[i].style.color = "blue";
+function checkAnswers () {
+    if (this.value !== questions[questionIndex].correctAnswer){
+        timeLeft -= 5;
+        if (timeLeft < 0) {
+            timeLeft = 0;
+        }
     }
-        else{
-            answer[i].style.color="red";
-            setLosses ++;
-
+    questionIndex++ 
+    if (this.value = questions[questionIndex].correctAnswer){
+        setWins++
+    }
 }
-});
 
 
-    // Loop to assort the correct answer within the answers.
-    // for (var i=0; i <correctAnswer; i++){
-    //     answers.push(" ");
-    // }
-    // questionInput.textContent=question.innerHTML("");
-    // AnswerOptionsInput.textContent= answers.innerHTML("");
-    
-// function checkAnswers (correctAnswer) {
+
+// choice.addEventListener("click", function() {
 //     userAnswer = (choice.querySelector('input[name=correctAnswer'+ i +']:checked')||{}).value;
 
 //     if(userAnswer===choice[i].correctAnswer){
@@ -170,11 +165,10 @@ choice.addEventListener("click", function() {
 //         else{
 //             answer[i].style.color="red";
 //             setLosses ++;
-//         }
-
-//     }
 
 // }
+// });
+
 
 function setWins(){
     win.textContent=winsCounter;
@@ -205,14 +199,12 @@ function getlosses () {
     lose.textContent = loseCounter;
 }
 
-function checkWin() {
-    if (question === answers.join("")); {
-        isWin=true;
-    }
-};
+// function checkWin() {
+//     if (question === answers.join("")); {
+//         isWin=true;
+//     }
+// };
 
-function checkAnswers (correctAnswer) {
 
-}
-// console.log(askQuestions)
+// 
 // console.log(askQuestionsObj.answer);
