@@ -17,11 +17,12 @@ This Repository will create a Web API Code Quiz.  I attempted to make a web quiz
 Once the page loads and you are ready for the "oh so bad they are funny" jokes, click on the Start button.  Read through the question and answers.  Select the answer you feel is correct.  Then select Next.  Game is over when time alloted has ran down to 0.  
 
 ## Screenshot
-
+![Code-Quiz Image](./Assets/screencapture-file-Users-candacerobbins-Documents-UCF-Homework-04-Code-Quiz-index-html-2022-04-04-23_29_38.png)
 
 
 ## Credits
 I had lots of help from my tutor as well as using the CSS template from the Unit 4 Web API's Activity 28 Mini-project.  
 
 ## Links
-[Website] 
+[Website] https://canro2b.github.io/04-Code-Quiz/
+[GitHub] https://github.com/CanRo2B/04-Code-Quiz
