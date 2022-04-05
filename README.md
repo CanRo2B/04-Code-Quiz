@@ -17,7 +17,7 @@ This Repository will create a Web API Code Quiz.  I attempted to make a web quiz
 Once the page loads and you are ready for the "oh so bad they are funny" jokes, click on the Start button.  Read through the question and answers.  Select the answer you feel is correct.  Then select Next.  Game is over when time alloted has ran down to 0.  
 
 ## Screenshot
-![Code-Quiz Image](./Assets/screencapture-file-Users-candacerobbins-Documents-UCF-Homework-04-Code-Quiz-index-html-2022-04-04-23_29_38.png)
+![Code-Quiz Image](./Assets/screencapture-file-Users-candacerobbins-Documents-UCF-Homework-04-Code-Quiz-index-html-2022-04-05-17_07_46.png)
 
 
 ## Credits
