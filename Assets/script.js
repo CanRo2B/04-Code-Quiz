@@ -14,7 +14,7 @@ var winCount= 0;
 var loseCount= 0;
 var isWin = false;
 var timeLeft=30;
-var countdown;
+
 
 // Arrays used for the questions and answers.
 var questionIndex=0;
@@ -105,34 +105,21 @@ setLosses()
 
 function startTimer() {
 // Start Timer
-countdown= setInterval (function(){
+var countdown= setInterval(function() {
     console.log(timeLeft)
     timeLeft--;
-    timeElement.textContent = timeLeft + "seconds remaining";
-    if (timeLeft <= 0){
-        
-      else ;
-      if {setLosses(countdown = -5)
-        };
-    }
-    // If time runs out before answered correctly.
-    if (timeLeft === 0) {
-        clearInterval(timeLeft);
-       
-    }
-}, 1000);
-};
-// if (timeLeft> 1) {
-//         timeElement.textContent = timeLeft + " seconds remaining";
-//         timeLeft--;
-//     } else if (timeLeft ===1) {
-//             countdown.textContent = timeLeft + " second remaining";
+if (timeLeft> 1) {
+        timeElement.textContent = timeLeft + " seconds remaining";
+    } else if (timeLeft ===1) {
+            countdown.textContent = timeLeft + " second remaining";
             
-//     } else {
-//         timeLeft=0;
-//         timeElement.textContent = "Game over ";
-//         clearInterval(timeInterval);
-//     }
+    } else {
+        timeLeft=0;
+        timeElement.textContent = "Game over ";
+        clearInterval(countdown);
+    }
+    }, 1000);
+};
 
 // Start the Game
 function renderQuestions(){
@@ -146,19 +133,11 @@ function renderQuestions(){
         answerButton.textContent= i + 1 + ". " + choice
         options.appendChild(answerButton)
     })
-   
+} 
+choice.addEventListener("click", function() {
+    userAnswer = (choice.querySelector('input[name=correctAnswer'+ i +']:checked')||{}).value;
 
-    // Loop to assort the correct answer within the answers.
-    for (var i=0; i <correctAnswer; i++){
-        answers.push(" ");
-    }
-    // questionInput.textContent=question.innerHTML("");
-    // AnswerOptionsInput.textContent= answers.innerHTML("");
-    
-function checkAnswers (correctAnswer) {
-    userAnswer = (answer.querySelector('input[name=correctAnswer'+ i +']:checked')||{}).value;
-
-    if(userAnswer===answer[i].correctAnswer){
+    if(userAnswer===choice[i].correctAnswer){
 
         isWin++;
 
@@ -167,11 +146,35 @@ function checkAnswers (correctAnswer) {
         else{
             answer[i].style.color="red";
             setLosses ++;
-        }
-
-    }
 
 }
+});
+
+
+    // Loop to assort the correct answer within the answers.
+    // for (var i=0; i <correctAnswer; i++){
+    //     answers.push(" ");
+    // }
+    // questionInput.textContent=question.innerHTML("");
+    // AnswerOptionsInput.textContent= answers.innerHTML("");
+    
+// function checkAnswers (correctAnswer) {
+//     userAnswer = (choice.querySelector('input[name=correctAnswer'+ i +']:checked')||{}).value;
+
+//     if(userAnswer===choice[i].correctAnswer){
+
+//         isWin++;
+
+//         correctAnswer[i].style.color = "blue";
+//     }
+//         else{
+//             answer[i].style.color="red";
+//             setLosses ++;
+//         }
+
+//     }
+
+// }
 
 function setWins(){
     win.textContent=winsCounter;
