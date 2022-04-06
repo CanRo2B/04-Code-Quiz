@@ -1,4 +1,4 @@
-
+// Selectors from HTML
 var questionInput = document.querySelector(".Question");
 var  AnswerOptionsInput = document.querySelector(".Answer-options");
 var win = document.querySelector(".win");
@@ -8,6 +8,7 @@ var timeElement= document.querySelector(".countdown");
 var options=document.querySelector("#options");
 console.log(options);
 
+// Global variables
 var question= " ";
 var correctAnswer= " ";
 var winCount= 0;
@@ -80,10 +81,9 @@ function init(){
 // Start game when start button is pushed.  
 function startGame() {
 
-    // Start button will not be able to be pushed until game is finished.
-    // startButton.disabled = true;
-
+// funtion to ask questions
     renderQuestions ()
+    // function to start timer
     startTimer()
 }
 
@@ -138,6 +138,7 @@ function renderQuestions(){
     console.log(askQuestions)
 } 
 
+// function to check answers
 function checkAnswers () {
     if (this.value !== questions[questionIndex].correctAnswer){
         timeLeft -= 5;
@@ -169,7 +170,7 @@ function checkAnswers () {
 // }
 // });
 
-
+// function to get amount of wins and losses from localStorage
 function setWins(){
     win.textContent=winsCounter;
     localStorage.setItem("winCount", winsCounter);
@@ -199,12 +200,6 @@ function getlosses () {
     lose.textContent = loseCounter;
 }
 
-// function checkWin() {
-//     if (question === answers.join("")); {
-//         isWin=true;
-//     }
-// };
 
 
-// 
 // console.log(askQuestionsObj.answer);
